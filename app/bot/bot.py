@@ -5,6 +5,8 @@ from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.fsm.storage.redis import RedisStorage
+from redis.asyncio import Redis
+
 from app.bot.handlers.admin import admin_router
 from app.bot.handlers.others import others_router
 from app.bot.handlers.settings import settings_router
@@ -17,9 +19,9 @@ from app.bot.middlewares.shadow_ban import ShadowBanMiddleware
 from app.bot.middlewares.statistics import ActivityCounterMiddleware
 from app.infrastructure.database.connection import get_pg_pool
 from config.config import Config
-from redis.asyncio import Redis
 
 logger = logging.getLogger(__name__)
+
 
 async def main(config: Config) -> None:
     logger.info("Starting bot...")
