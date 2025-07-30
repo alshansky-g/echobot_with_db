@@ -4,7 +4,6 @@ from urllib.parse import quote
 from psycopg import AsyncConnection
 from psycopg_pool import AsyncConnectionPool
 
-
 logger = logging.getLogger(__name__)
 
 

@@ -8,3 +8,4 @@ __pycache__/
 .redis_data/
 .postgres-data/
 .pgadmin_data/
+py.py
