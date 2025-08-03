@@ -69,7 +69,7 @@ async def get_user(
                     role,
                     is_alive,
                     banned,
-                    created_at,
+                    created_at
                     FROM users WHERE user_id = %s;
                     """,
                     params=(user_id,),

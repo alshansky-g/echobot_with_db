@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-def get_lang_settings(i18n: dict, locales: list[str],
+def get_lang_settings_kb(i18n: dict, locales: list[str],
                       checked: str) -> InlineKeyboardMarkup:
     buttons = []
     for locale in sorted(locales):
